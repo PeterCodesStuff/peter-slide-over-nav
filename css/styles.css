@@ -1,0 +1,164 @@
+/* 
+    Sorry if I went overboard on the styling. I just finished it up kind of quick
+    and than decided to play with it. I think it looks pretty cool. If want me to just
+    keep them in the grayscale format for grading purposes that is fine.
+*/
+
+body {
+    background-color: rgb(211, 211, 211);
+    margin:0;
+    font-family: 'Roboto', serif;
+}
+
+.logo {
+    width:44px;
+    height:44px;
+    background: linear-gradient(rgb(255, 153, 116), rgb(255, 128, 82));
+    transition: 1s all ease-out;
+}
+
+.logo:hover {
+    height:54px;
+    width:54px;
+    transition: 1s all ease-in-out;
+}
+
+/* Hamburger Button */
+
+.menu-button {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0.625rem;
+}
+
+.menu-button-line {
+    width:28px;
+    height:4px;
+    margin-top:6px;
+    margin-left:4px;
+    background-color: rgb(250, 146, 108);
+}
+
+.menu-button-line:first-of-type {
+    background-color: rgb(255, 189, 164);
+}
+
+.menu-button-line:last-of-type {
+    background-color: rgb(250, 118, 70);
+}
+
+.menu-button-line:first-of-type {
+    margin-top: 0;
+}
+
+/* Top Bar */
+
+.top-bar {
+    display:flex;
+    justify-content: space-between;
+    background: linear-gradient(rgb(61, 61, 61), rgb(47, 47, 47));
+    padding:0.75rem;
+    padding-right:0.25rem;
+}
+
+/* Nav(Menu) Closed */
+nav {
+    height:100%;
+    position:absolute;
+    width:270px;
+    margin-left:-100%;
+    transition: 1s all ease-in-out;
+    top:0;
+    left:0;
+    background: linear-gradient(rgb(55, 55, 55), rgb(47, 47, 47));
+    padding-top:2rem;
+}
+
+.menu {
+    padding:0.5rem;
+    list-style-type: none;
+    margin:0px auto;
+    text-align: center;
+}
+
+.menu-box a {
+    display:block;
+    text-decoration: none;
+    color:black;
+    padding:0.75rem;
+    font-size:1.125rem;
+    color: coral;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+    font-size: 1.375rem;
+    color: rgb(255, 173, 80);
+    transition: 0.5s all ease-in-out;
+}
+
+/* Nav(Menu) Open */
+
+.open-nav {
+    margin-left:0%;
+    transition: 1s all ease-in-out;
+}
+
+main {
+    margin: 12rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    margin-top:8rem;
+    text-align: center;
+    width:100vw;
+    font-size: 0.875rem;
+}
+
+/* Media Queries Begin */
+
+@media only screen and (min-width:700px) {
+    .top-bar {
+        flex-direction: row-reverse;
+        justify-content:space-between;
+        align-items: center;
+        width:100vw;
+    }
+
+    .logo {
+        padding: 0.5rem;    
+        width:42px;
+        height:42px;
+        background: linear-gradient(rgb(255, 153, 116), rgb(255, 128, 82));
+    }
+    
+    nav {
+        padding: 1rem;
+        position:static;
+        margin-left:0;
+        background-color: transparent;
+        width:auto;
+        background:none;
+    }
+
+    .menu {
+        display:flex;
+    }
+
+    .menu-button {
+        display:none;
+    }
+
+    .menu li a {
+        display:inline;
+    }
+}
